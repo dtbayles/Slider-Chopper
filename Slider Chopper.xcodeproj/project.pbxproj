@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32CC99BE27EEF0770025B30D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99BD27EEF0770025B30D /* AppDelegate.swift */; };
+		32CC99C027EEF0770025B30D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32CC99BF27EEF0770025B30D /* GameScene.sks */; };
+		32CC99C227EEF0770025B30D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 32CC99C127EEF0770025B30D /* Actions.sks */; };
+		32CC99C427EEF0770025B30D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99C327EEF0770025B30D /* GameScene.swift */; };
+		32CC99C627EEF0770025B30D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99C527EEF0770025B30D /* GameViewController.swift */; };
+		32CC99C927EEF0770025B30D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CC99C727EEF0770025B30D /* Main.storyboard */; };
+		32CC99CB27EEF0790025B30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32CC99CA27EEF0790025B30D /* Assets.xcassets */; };
+		32CC99CE27EEF0790025B30D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32CC99CC27EEF0790025B30D /* LaunchScreen.storyboard */; };
+		32CC99D827EEF0790025B30D /* Slider_ChopperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99D727EEF0790025B30D /* Slider_ChopperTests.swift */; };
+		32CC99E227EEF0790025B30D /* Slider_ChopperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99E127EEF0790025B30D /* Slider_ChopperUITests.swift */; };
+		32CC99E427EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99E327EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32CC99D427EEF0790025B30D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32CC99B227EEF0770025B30D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32CC99B927EEF0770025B30D;
+			remoteInfo = "Slider Chopper";
+		};
+		32CC99DE27EEF0790025B30D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32CC99B227EEF0770025B30D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32CC99B927EEF0770025B30D;
+			remoteInfo = "Slider Chopper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32CC99BA27EEF0770025B30D /* Slider Chopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slider Chopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CC99BD27EEF0770025B30D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		32CC99BF27EEF0770025B30D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		32CC99C127EEF0770025B30D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		32CC99C327EEF0770025B30D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		32CC99C527EEF0770025B30D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		32CC99C827EEF0770025B30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32CC99CA27EEF0790025B30D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32CC99CD27EEF0790025B30D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		32CC99D327EEF0790025B30D /* Slider ChopperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Slider ChopperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CC99D727EEF0790025B30D /* Slider_ChopperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider_ChopperTests.swift; sourceTree = "<group>"; };
+		32CC99DD27EEF0790025B30D /* Slider ChopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Slider ChopperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CC99E127EEF0790025B30D /* Slider_ChopperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider_ChopperUITests.swift; sourceTree = "<group>"; };
+		32CC99E327EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider_ChopperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32CC99B727EEF0770025B30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC99D027EEF0790025B30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC99DA27EEF0790025B30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32CC99B127EEF0770025B30D = {
+			isa = PBXGroup;
+			children = (
+				32CC99BC27EEF0770025B30D /* Slider Chopper */,
+				32CC99D627EEF0790025B30D /* Slider ChopperTests */,
+				32CC99E027EEF0790025B30D /* Slider ChopperUITests */,
+				32CC99BB27EEF0770025B30D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32CC99BB27EEF0770025B30D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32CC99BA27EEF0770025B30D /* Slider Chopper.app */,
+				32CC99D327EEF0790025B30D /* Slider ChopperTests.xctest */,
+				32CC99DD27EEF0790025B30D /* Slider ChopperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32CC99BC27EEF0770025B30D /* Slider Chopper */ = {
+			isa = PBXGroup;
+			children = (
+				32CC99BD27EEF0770025B30D /* AppDelegate.swift */,
+				32CC99BF27EEF0770025B30D /* GameScene.sks */,
+				32CC99C127EEF0770025B30D /* Actions.sks */,
+				32CC99C327EEF0770025B30D /* GameScene.swift */,
+				32CC99C527EEF0770025B30D /* GameViewController.swift */,
+				32CC99C727EEF0770025B30D /* Main.storyboard */,
+				32CC99CA27EEF0790025B30D /* Assets.xcassets */,
+				32CC99CC27EEF0790025B30D /* LaunchScreen.storyboard */,
+			);
+			path = "Slider Chopper";
+			sourceTree = "<group>";
+		};
+		32CC99D627EEF0790025B30D /* Slider ChopperTests */ = {
+			isa = PBXGroup;
+			children = (
+				32CC99D727EEF0790025B30D /* Slider_ChopperTests.swift */,
+			);
+			path = "Slider ChopperTests";
+			sourceTree = "<group>";
+		};
+		32CC99E027EEF0790025B30D /* Slider ChopperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				32CC99E127EEF0790025B30D /* Slider_ChopperUITests.swift */,
+				32CC99E327EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift */,
+			);
+			path = "Slider ChopperUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32CC99B927EEF0770025B30D /* Slider Chopper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CC99E727EEF0790025B30D /* Build configuration list for PBXNativeTarget "Slider Chopper" */;
+			buildPhases = (
+				32CC99B627EEF0770025B30D /* Sources */,
+				32CC99B727EEF0770025B30D /* Frameworks */,
+				32CC99B827EEF0770025B30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Slider Chopper";
+			productName = "Slider Chopper";
+			productReference = 32CC99BA27EEF0770025B30D /* Slider Chopper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32CC99D227EEF0790025B30D /* Slider ChopperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CC99EA27EEF0790025B30D /* Build configuration list for PBXNativeTarget "Slider ChopperTests" */;
+			buildPhases = (
+				32CC99CF27EEF0790025B30D /* Sources */,
+				32CC99D027EEF0790025B30D /* Frameworks */,
+				32CC99D127EEF0790025B30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32CC99D527EEF0790025B30D /* PBXTargetDependency */,
+			);
+			name = "Slider ChopperTests";
+			productName = "Slider ChopperTests";
+			productReference = 32CC99D327EEF0790025B30D /* Slider ChopperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		32CC99DC27EEF0790025B30D /* Slider ChopperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CC99ED27EEF0790025B30D /* Build configuration list for PBXNativeTarget "Slider ChopperUITests" */;
+			buildPhases = (
+				32CC99D927EEF0790025B30D /* Sources */,
+				32CC99DA27EEF0790025B30D /* Frameworks */,
+				32CC99DB27EEF0790025B30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32CC99DF27EEF0790025B30D /* PBXTargetDependency */,
+			);
+			name = "Slider ChopperUITests";
+			productName = "Slider ChopperUITests";
+			productReference = 32CC99DD27EEF0790025B30D /* Slider ChopperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32CC99B227EEF0770025B30D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					32CC99B927EEF0770025B30D = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					32CC99D227EEF0790025B30D = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 32CC99B927EEF0770025B30D;
+					};
+					32CC99DC27EEF0790025B30D = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 32CC99B927EEF0770025B30D;
+					};
+				};
+			};
+			buildConfigurationList = 32CC99B527EEF0770025B30D /* Build configuration list for PBXProject "Slider Chopper" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32CC99B127EEF0770025B30D;
+			productRefGroup = 32CC99BB27EEF0770025B30D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32CC99B927EEF0770025B30D /* Slider Chopper */,
+				32CC99D227EEF0790025B30D /* Slider ChopperTests */,
+				32CC99DC27EEF0790025B30D /* Slider ChopperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32CC99B827EEF0770025B30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CC99C927EEF0770025B30D /* Main.storyboard in Resources */,
+				32CC99C027EEF0770025B30D /* GameScene.sks in Resources */,
+				32CC99CB27EEF0790025B30D /* Assets.xcassets in Resources */,
+				32CC99CE27EEF0790025B30D /* LaunchScreen.storyboard in Resources */,
+				32CC99C227EEF0770025B30D /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC99D127EEF0790025B30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC99DB27EEF0790025B30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32CC99B627EEF0770025B30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CC99C427EEF0770025B30D /* GameScene.swift in Sources */,
+				32CC99C627EEF0770025B30D /* GameViewController.swift in Sources */,
+				32CC99BE27EEF0770025B30D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC99CF27EEF0790025B30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CC99D827EEF0790025B30D /* Slider_ChopperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CC99D927EEF0790025B30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CC99E227EEF0790025B30D /* Slider_ChopperUITests.swift in Sources */,
+				32CC99E427EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32CC99D527EEF0790025B30D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32CC99B927EEF0770025B30D /* Slider Chopper */;
+			targetProxy = 32CC99D427EEF0790025B30D /* PBXContainerItemProxy */;
+		};
+		32CC99DF27EEF0790025B30D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32CC99B927EEF0770025B30D /* Slider Chopper */;
+			targetProxy = 32CC99DE27EEF0790025B30D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		32CC99C727EEF0770025B30D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32CC99C827EEF0770025B30D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		32CC99CC27EEF0790025B30D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32CC99CD27EEF0790025B30D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32CC99E527EEF0790025B30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32CC99E627EEF0790025B30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32CC99E827EEF0790025B30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRFD4T78W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewbayles.Slider-Chopper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32CC99E927EEF0790025B30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRFD4T78W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewbayles.Slider-Chopper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		32CC99EB27EEF0790025B30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRFD4T78W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewbayles.Slider-ChopperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slider Chopper.app/Slider Chopper";
+			};
+			name = Debug;
+		};
+		32CC99EC27EEF0790025B30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRFD4T78W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewbayles.Slider-ChopperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slider Chopper.app/Slider Chopper";
+			};
+			name = Release;
+		};
+		32CC99EE27EEF0790025B30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRFD4T78W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewbayles.Slider-ChopperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Slider Chopper";
+			};
+			name = Debug;
+		};
+		32CC99EF27EEF0790025B30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FRFD4T78W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewbayles.Slider-ChopperUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Slider Chopper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32CC99B527EEF0770025B30D /* Build configuration list for PBXProject "Slider Chopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CC99E527EEF0790025B30D /* Debug */,
+				32CC99E627EEF0790025B30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32CC99E727EEF0790025B30D /* Build configuration list for PBXNativeTarget "Slider Chopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CC99E827EEF0790025B30D /* Debug */,
+				32CC99E927EEF0790025B30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32CC99EA27EEF0790025B30D /* Build configuration list for PBXNativeTarget "Slider ChopperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CC99EB27EEF0790025B30D /* Debug */,
+				32CC99EC27EEF0790025B30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32CC99ED27EEF0790025B30D /* Build configuration list for PBXNativeTarget "Slider ChopperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CC99EE27EEF0790025B30D /* Debug */,
+				32CC99EF27EEF0790025B30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32CC99B227EEF0770025B30D /* Project object */;
+}
