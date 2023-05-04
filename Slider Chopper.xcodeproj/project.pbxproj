@@ -18,6 +18,8 @@
 		32CC99D827EEF0790025B30D /* Slider_ChopperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99D727EEF0790025B30D /* Slider_ChopperTests.swift */; };
 		32CC99E227EEF0790025B30D /* Slider_ChopperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99E127EEF0790025B30D /* Slider_ChopperUITests.swift */; };
 		32CC99E427EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32CC99E327EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift */; };
+		3A1632672A032C9F007FA8EC /* SliderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1632662A032C9F007FA8EC /* SliderNode.swift */; };
+		3A586D302A0313790096840E /* PlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A586D2F2A0313790096840E /* PlayerNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		32CC99DD27EEF0790025B30D /* Slider ChopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Slider ChopperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32CC99E127EEF0790025B30D /* Slider_ChopperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider_ChopperUITests.swift; sourceTree = "<group>"; };
 		32CC99E327EEF0790025B30D /* Slider_ChopperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider_ChopperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3A1632662A032C9F007FA8EC /* SliderNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderNode.swift; sourceTree = "<group>"; };
+		3A586D2F2A0313790096840E /* PlayerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				32CC99C727EEF0770025B30D /* Main.storyboard */,
 				32CC99CA27EEF0790025B30D /* Assets.xcassets */,
 				32CC99CC27EEF0790025B30D /* LaunchScreen.storyboard */,
+				3A586D2F2A0313790096840E /* PlayerNode.swift */,
+				3A1632662A032C9F007FA8EC /* SliderNode.swift */,
 			);
 			path = "Slider Chopper";
 			sourceTree = "<group>";
@@ -265,7 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CC99C427EEF0770025B30D /* GameScene.swift in Sources */,
+				3A1632672A032C9F007FA8EC /* SliderNode.swift in Sources */,
 				32CC99C627EEF0770025B30D /* GameViewController.swift in Sources */,
+				3A586D302A0313790096840E /* PlayerNode.swift in Sources */,
 				32CC99BE27EEF0770025B30D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

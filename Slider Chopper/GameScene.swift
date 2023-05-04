@@ -8,81 +8,146 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    private var player: PlayerNode!
+    
+    private var scoreLabel: SKLabelNode!
+    private var score = 0
+    
+    let playerCategory: UInt32 = 0x1 << 0
+    let sliderCategory: UInt32 = 0x1 << 1
+    
+    private var gameStarted = false
+    private var isGamePaused = false
+    private var pauseButton: SKSpriteNode!
+    
+    private var lastSliderGenerationTime: TimeInterval?
     
     override func didMove(to view: SKView) {
+        // Set up physics world
+        physicsWorld.contactDelegate = self
+        physicsWorld.gravity = CGVector(dx: 0, dy: -2.8)
         
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
+        // Set up player
+        player = PlayerNode()
+        player.physicsBody?.categoryBitMask = playerCategory
+        player.physicsBody?.contactTestBitMask = sliderCategory
+        player.position = CGPoint(x: frame.midX, y: frame.minY + player.size.height)
+        addChild(player)
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+        // Set up pause button
+        pauseButton = SKSpriteNode(imageNamed: "pause_button")
+        pauseButton.setScale(0.2)
+        pauseButton.position = CGPoint(x: frame.minX + 125, y: frame.maxY - pauseButton.size.height)
+        addChild(pauseButton)
         
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        // Set up score label
+        scoreLabel = SKLabelNode(text: "Score: \(score)")
+        scoreLabel.fontSize = 48
+        scoreLabel.position = CGPoint(x: frame.minX + scoreLabel.frame.size.width, y: frame.maxY - pauseButton.size.height - scoreLabel.frame.size.height * 2 - 10)
+        scoreLabel.fontColor = .white
+        addChild(scoreLabel)
+        
+        // Set up lastSliderGenerationTime
+        lastSliderGenerationTime = 0
+    }
+
+    func createSlider() {
+        // Create a slider and add it to the scene
+        let slider = SliderNode()
+        slider.physicsBody?.categoryBitMask = sliderCategory
+        slider.physicsBody?.contactTestBitMask = playerCategory
+        slider.position = CGPoint(x: CGFloat.random(in: -(frame.width - slider.size.width * 4) / 2 ..< (frame.width - slider.size.width * 4) / 2), y: frame.maxY)
+        addChild(slider)
+
+        // Set up slider movement
+//        let moveSlider = SKAction.moveBy(x: 0, y: -((frame.maxY * 2) + slider.size.height), duration: 3)
+//        let removeSlider = SKAction.removeFromParent()
+//        slider.run(SKAction.sequence([moveSlider, removeSlider]))
     }
     
-    
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
-        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
-        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
+    func eatSlider(slider: SKSpriteNode) {
+        // Remove slider from scene and update score
+        slider.removeFromParent()
+        score += 1
+        scoreLabel.text = "Score: \(score)"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+        if !gameStarted {
+            // Set up slider generation timer
+//            let generateSliders = SKAction.repeatForever(SKAction.sequence([
+//                SKAction.run(createSlider),
+//                SKAction.wait(forDuration: 1)
+//            ]))
+//            run(generateSliders)
+            gameStarted = true
+        } else {
+            for touch in touches {
+                let location = touch.location(in: self)
+                let nodesAtPoint = nodes(at: location)
+                if nodesAtPoint.contains(pauseButton) {
+                    if isGamePaused {
+                        // Resume the game
+                        isGamePaused = false
+                        // Hide pause menu or resume game logic here
+                    } else {
+                        // Pause the game
+                        isGamePaused = true
+                        // Show pause menu or pause game logic here
+                    }
+                }
+            }
+        }
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+        if isGamePaused {
+            return // Skip game logic when game is paused
         }
         
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+        // Move the player horizontally based on device tilt
+        if let acceleration = player.motionManager.accelerometerData?.acceleration {
+            let newX = player.position.x + CGFloat(acceleration.x * 50)
+            let minX = frame.minX + player.size.width * 2
+            let maxX = frame.maxX - player.size.width * 2
+            player.position.x = max(min(newX, maxX), minX)
+            player.position.y = frame.minY + player.size.height
+        }
+        
+        // Generate sliders
+        let sliderGenerationInterval: TimeInterval = 1
+        let timeSinceLastSliderGeneration = currentTime - (lastSliderGenerationTime ?? 0)
+        if timeSinceLastSliderGeneration > sliderGenerationInterval {
+            createSlider()
+            lastSliderGenerationTime = currentTime
+        }
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.categoryBitMask == playerCategory && contact.bodyB.categoryBitMask == sliderCategory {
+            // Contact occurred between player and slider
+            score += 1
+            scoreLabel.text = "Score: \(score)"
+            contact.bodyB.node?.removeFromParent() // Remove the slider from the scene
+        } else if contact.bodyA.categoryBitMask == sliderCategory && contact.bodyB.categoryBitMask == playerCategory {
+            // Contact occurred between slider and player
+            score += 1
+            scoreLabel.text = "Score: \(score)"
+            contact.bodyA.node?.removeFromParent() // Remove the slider from the scene
+        }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+    override func didSimulatePhysics() {
+        // Check if any sliders have fallen off the screen
+        for slider in children.filter({ $0.physicsBody?.categoryBitMask == sliderCategory }) {
+            if slider.position.y < frame.minY {
+                slider.removeFromParent()
+                score -= 1
+                scoreLabel.text = "Score: \(score)"
+            }
+        }
     }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-    }
+
 }
